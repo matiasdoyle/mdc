@@ -4,11 +4,11 @@ import xerox
 import argparse
 
 def parse_args():
-  parser = argparse.ArgumentParser()
+  parser = argparse.ArgumentParser(usage='%(prog)s [options]')
 
-  parser.add_argument('-s', '--spaces', help='Use spaces', action='store_true')
-  parser.add_argument('-f', '--file', help='Load code from file')
-  parser.add_argument('-o', '--stdout', help='Print parsed code to stdout', action='store_true')
+  parser.add_argument('-s', '--spaces', help='use spaces instead of tabs', action='store_true')
+  parser.add_argument('-f', '--file', help='load from file')
+  parser.add_argument('-o', '--stdout', help='print parsed code to stdout', action='store_true')
 
   return parser.parse_args()
 

@@ -10,12 +10,12 @@ Running `mdc` from the command line without any arguments will take the contents
 	$ mdc
 	$ # Clipboard: '	test'
 
-Optional arguments:
+Full usage:
 
-	-f, --file
-		Load code from file
-	-s, --spaces
-		Place spaces in front of code instead of tabs
-	-o, --stdout
-		Print to stdout
+	usage: mdc [options]
 
+	optional arguments:
+	  -h, --help            show this help message and exit
+	  -s, --spaces          use spaces instead of tabs
+	  -f FILE, --file FILE  load from file
+	  -o, --stdout          print parsed code to stdout
