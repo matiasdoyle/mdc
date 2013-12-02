@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 
 import xerox
 import argparse
@@ -34,10 +34,12 @@ def add_indentation(code, tab=True, spaces=4, tabs=1):
 
   return md
 
-def main(args):
+def main():
+  args = parse_args()
+
   tab = not args.spaces
   code = add_indentation(get_code(args), tab)
   xerox.copy(code)
 
 if __name__ == "__main__":
-  main(parse_args())
+  main()
