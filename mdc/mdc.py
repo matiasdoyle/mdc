@@ -32,7 +32,7 @@ def add_indentation(code, tab=True, spaces=4, tabs=1):
   for i in range(0, count): indentation += t
   for line in code.split('\n'): md += indentation + line + '\n'
 
-  return md
+  return md.rstrip()
 
 def main():
   args = parse_args()
