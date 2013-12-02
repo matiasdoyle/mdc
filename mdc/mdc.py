@@ -8,7 +8,7 @@ def parse_args():
 
   parser.add_argument('-s', '--spaces', help='Use spaces', action='store_true')
   parser.add_argument('-f', '--file', help='Load code from file')
-  # parser.add_argument('-o', '--out', help='File to place output code')
+  parser.add_argument('-o', '--stdout', help='Print parsed code to stdout', action='store_true')
 
   return parser.parse_args()
 
@@ -39,7 +39,9 @@ def main():
 
   tab = not args.spaces
   code = add_indentation(get_code(args), tab)
-  xerox.copy(code)
+  
+  if args.stdout: print code
+  else: xerox.copy(code)
 
 if __name__ == "__main__":
   main()
