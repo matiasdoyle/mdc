@@ -16,3 +16,6 @@ Optional arguments:
 		Load code from file
 	-s, --spaces
 		Place spaces in front of code instead of tabs
+	-o, --stdout
+		Print to stdout
+
